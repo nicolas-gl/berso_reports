@@ -32,5 +32,6 @@ def copy_xls ():
     # print(sheet[1034][3].value)
 
     # пока хз, зачем написал это
+    # test
 
 copy_xls ()
