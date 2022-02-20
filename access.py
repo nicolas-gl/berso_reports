@@ -1,2 +1,0 @@
-dbx_token = 'svvQug_jSSIAAAAAAAAAAZhAhuEBtc6qKxeW7wNoVngrhUWokIkNIFPb9XgtX067'
-bot_token = '5063112601:AAGQSDm2yVbjROtM18WbbjhVEzYY5AnG6-I'
