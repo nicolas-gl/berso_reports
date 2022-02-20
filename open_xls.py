@@ -1,10 +1,10 @@
-from re import A
 import openpyxl
-from variables import sales_file_path, temp_sales_file_name
+import dropbox_file_copy
+from variables import local_sales_file_name
 
 
 def make_report_text():
-    book = openpyxl.open(temp_sales_file_name, read_only=True)
+    book = openpyxl.open(local_sales_file_name, read_only=True)
     sheet = book.active
 
     # создаем список заголовков:
@@ -16,7 +16,6 @@ def make_report_text():
     return_str = ''
     for row in sheet:
         if row[columns['Выплачено?']].value == '-':
-            
             a = '{})  {}  {} {} за {} ({})\nДолг: *{} - {}*\n\n'.format(
                 i,
                 str(row[0].value)[0:11],
@@ -27,8 +26,6 @@ def make_report_text():
                 row[9].value,
                 row[10].value
                 )
-
-            
             return_str += a
             i += 1
     if return_str == '':
@@ -36,6 +33,3 @@ def make_report_text():
     # почему-то не работает удаление пробелов в конце. Разобраться
     return_str.rstrip()
     return return_str
-
-# проверка работы функции
-# print(make_report_text())

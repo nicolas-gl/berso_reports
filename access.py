@@ -1,2 +1,2 @@
-dbx_token = 'sl.BCbUSHpuleuo2zzU9lSeiHcygAte9c6QlR_jxMpGmt2l5_jAk8_tAwzXSP67YM6t8_NE7KouE6V3iQQwYGoDOtQ7DSB00UO5DS2y2n0z7-t1Mi58-Lt4qKfVrEYw057XXdeK7Fif'
+dbx_token = 'svvQug_jSSIAAAAAAAAAAZhAhuEBtc6qKxeW7wNoVngrhUWokIkNIFPb9XgtX067'
 bot_token = '5063112601:AAGQSDm2yVbjROtM18WbbjhVEzYY5AnG6-I'
