@@ -1,7 +1,7 @@
 import logging
 from aiogram import Bot, Dispatcher, executor, types
 from access import bot_token
- 
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
