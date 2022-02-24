@@ -4,6 +4,7 @@ from variables import local_sales_file_name
 
 
 def make_report_text():
+    dropbox_file_copy.download_sales()
     book = openpyxl.open(local_sales_file_name, read_only=True)
     sheet = book.active
 
