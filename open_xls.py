@@ -16,7 +16,7 @@ def make_report_text():
     return_str = ''
     for row in sheet:
         if row[columns['Выплачено?']].value == '-':
-            a = '○  *{} - {} руб.*\n{} {} \n\n'.format(
+            a = '○  *{} - {} руб.*\n{} - {} \n\n'.format(
                 row[9].value,           # комитент
                 row[10].value,          # сумма комитенту
                 row[3].value,           # артикул
