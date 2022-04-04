@@ -13,24 +13,17 @@ def make_report_text():
     for now in range(len(sheet[1])):
         columns[sheet[1][now].value] = now
 
-    i = 1
     return_str = ''
     for row in sheet:
         if row[columns['Выплачено?']].value == '-':
-            a = '{})  {}  {} {} за {} ({})\nДолг: *{} - {}*\n\n'.format(
-                i,
-                str(row[0].value)[0:11],
-                row[2].value,
-                row[3].value,
-                row[6].value,
-                row[7].value,
-                row[9].value,
-                row[10].value
+            a = '○  *{} - {} руб.*\n{} {} \n\n'.format(
+                row[9].value,           # комитент
+                row[10].value,          # сумма комитенту
+                row[3].value,           # артикул
+                row[2].value,           # название предмета
                 )
             return_str += a
-            i += 1
     if return_str == '':
         return 'Нет долгов перед комитентами'
-    # почему-то не работает удаление пробелов в конце. Разобраться
-    return_str.rstrip()
+    # return_str.rstrip()                       не знаю, пригодится ли это. Кажется, уже нет, сохраню на память
     return return_str
