@@ -10,12 +10,12 @@ def make_report_text():
     return_str = ''
 
     for row in sheet:
-        if row[8].value == '-':                             #проверка на невыплату
+        if row[9].value == '-':                             #проверка на невыплату
             a = '○  *{} - {} руб.*\n{} - {} \n\n'.format(
-                row[9].value,                               # комитент
-                row[10].value,                              # сумма комитенту
-                row[3].value,                               # артикул
-                row[2].value,                               # название предмета
+                row[10].value,                              # комитент
+                row[11].value,                              # сумма комитенту
+                row[4].value,                               # артикул
+                row[3].value,                               # название предмета
                 )
             return_str += a
     if return_str == '':
