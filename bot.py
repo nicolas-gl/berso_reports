@@ -16,7 +16,7 @@ dp = Dispatcher(bot)
 async def send_report(message: types.Message):
     await message.answer(open_xls.make_report_text())
     if str(message.from_user.id) not in bot_admin_id.split(' '):
-        await bot.send_message(bot_admin_id,
+        await bot.send_message(bot_admin_id.split(' ')[0],
                                "‼ {} (@{}, id:{}) писал боту".format(
                                    message.from_user.full_name,
                                    message.from_user.username,
